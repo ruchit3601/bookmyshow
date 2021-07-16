@@ -5,7 +5,6 @@ import HeroSlider from "react-slick";
 import {NextArrow,PrevArrow} from "./Arrows.component";
 
 
-import { directive } from "@babel/types";
 
 
 
