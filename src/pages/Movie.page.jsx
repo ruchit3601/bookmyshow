@@ -1,9 +1,11 @@
 import React from 'react';
+import MovioHero from '../components/MovieHero/MovioHero.component';
+
 
 const Movie = () => {
     return (
         <>
-            <h1>Hi!</h1>
+          <MovioHero />
         </>
     );
 };
