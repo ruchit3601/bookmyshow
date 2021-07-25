@@ -1,11 +1,9 @@
 import React from "react";
 import HeroSlider from "react-slick";
+import axios from "axios";
 
 //component
 import {NextArrow,PrevArrow} from "./Arrows.component";
-
-
-
 
 
 const HeroCarousal = () => {  
