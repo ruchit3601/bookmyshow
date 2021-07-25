@@ -12,4 +12,5 @@ const MovieLayout = (props) => {
     );
 };
 
+
 export default MovieLayout;

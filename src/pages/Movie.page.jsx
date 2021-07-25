@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
 
 //component
@@ -145,3 +146,4 @@ const Movie = () => {
 };
 
 export default Movie;
+
