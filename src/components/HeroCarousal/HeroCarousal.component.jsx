@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeroSlider from "react-slick";
 import axios from "axios";
 
@@ -7,6 +7,17 @@ import {NextArrow,PrevArrow} from "./Arrows.component";
 
 
 const HeroCarousal = () => {  
+
+    const [images , setImages] = useState([]);
+
+    useEffect( () => {
+        const requestNowPlayingMovies = async () => {
+            const getImages = await axios.get("/movie/now_playing");
+            console.log(getImages);
+        };
+        requestNowPlayingMovies();
+    }, []);
+
     const settingsLG = {
         arrows: true,
         centerMode: true,
@@ -28,12 +39,7 @@ const HeroCarousal = () => {
         NextArrow: <NextArrow />,
         PrevArrow: <PrevArrow />,
       };
-      const images = [
-            "https://in.bmscdn.com/promotions/cms/creatives/1625552417950_cinemaisbackcreativeadapts_webshowcase_1280x500.jpg",
-            "https://in.bmscdn.com/promotions/cms/creatives/1625685026902_joboltahaiwohihotahaifeatharshgujral_webshowcase_1280x500.jpg",
-            "https://in.bmscdn.com/promotions/cms/creatives/1626197859867_theultimatestartrekcollection_1280x500webbannerios.jpg",
-            "https://in.bmscdn.com/promotions/cms/creatives/1625559912123_bsm_1280x500_chickflick.jpg",
-    ];
+      
     return (
         <>
            <div className="lg:hidden">
